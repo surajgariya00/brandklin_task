@@ -12,20 +12,20 @@ class CardData {
 final List<CardData> dummyCardDataList = [
   CardData(
     imagePath: 'assets/thar.png',
-    title: 'Card 1 Title',
+    title: 'Thar is back',
     description:
-        'Description for Card 1. The Thar was first introduced in 2010 as a modernized version.',
+        'The Thar was first introduced in 2010 \nas a modernized version ',
   ),
   CardData(
     imagePath: 'assets/aa.png',
-    title: 'Card 2 Title',
+    title: 'Audi Luxury',
     description:
-        'Description for Card 2. You can customize this text as needed.',
+        'The Audi was first introduced in 2020 \nas a modernized version ',
   ),
   CardData(
     imagePath: 'assets/thar.png',
-    title: 'Card 2 Title',
+    title: 'Thar is back',
     description:
-        'Description for Card 2. You can customize this text as needed.',
+        'The Thar was first introduced in 2010 \nas a modernized version ',
   ),
 ];

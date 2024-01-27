@@ -51,6 +51,11 @@ Widget sectionSix() {
                 width: 311,
                 height: 180,
                 decoration: BoxDecoration(
+                  border: Border.all(
+                    width: 0.1,
+                    color: Colors.black,
+                  ),
+                  borderRadius: BorderRadius.circular(2),
                   image: DecorationImage(
                     image: NetworkImage(imageUrls[index]),
                     fit: BoxFit.cover,

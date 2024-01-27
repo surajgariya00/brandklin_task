@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 Widget sectionTwo() {
   return Container(
     margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-    height: 90,
+    height: 60,
     decoration: const BoxDecoration(
       image: DecorationImage(
         image: NetworkImage(
@@ -27,7 +27,7 @@ Widget sectionTwo() {
                     text: 'FUEL ',
                     style: TextStyle(
                       color: Color(0xFF828282),
-                      fontSize: 20,
+                      fontSize: 25,
                       fontFamily: 'Armstrong',
                       fontWeight: FontWeight.w800,
                       height: 0,
@@ -38,7 +38,7 @@ Widget sectionTwo() {
                     text: 'PRICE',
                     style: TextStyle(
                       color: Color(0xFFAB373A),
-                      fontSize: 20,
+                      fontSize: 25,
                       fontFamily: 'Armstrong',
                       fontWeight: FontWeight.w800,
                       height: 0,
@@ -47,6 +47,9 @@ Widget sectionTwo() {
                   ),
                 ],
               ),
+            ),
+            const SizedBox(
+              height: 10,
             ),
             Row(
               children: [
@@ -57,10 +60,15 @@ Widget sectionTwo() {
             )
           ],
         ),
-        const SizedBox(width: 30),
+        const SizedBox(width: 15),
         Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             _buildCurrencyContainer(),
+            const SizedBox(
+              width: 3,
+            ),
             _buildFuelImageContainer(),
           ],
         ),
@@ -71,15 +79,15 @@ Widget sectionTwo() {
 
 Widget _buildContainer(String text) {
   return Container(
-    width: 104,
-    height: 20,
+    width: 120,
+    height: 22,
     decoration: BoxDecoration(
       color: Colors.white,
-      border: Border.all(width: 1, color: const Color(0xFF737373)),
+      border: Border.all(width: 1.5, color: const Color(0xFF737373)),
     ),
     child: Row(
       mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Text(
           text,
@@ -101,12 +109,12 @@ Widget _buildContainer(String text) {
 
 Widget _buildCurrencyContainer() {
   return Container(
-    width: 45,
-    height: 56,
-    decoration: BoxDecoration(color: const Color(0xFF828282)),
-    child: Column(
+    width: 52,
+    height: 64,
+    decoration: const BoxDecoration(color: Color(0xFF828282)),
+    child: const Column(
       mainAxisAlignment: MainAxisAlignment.center,
-      children: const [
+      children: [
         Text(
           'INR',
           textAlign: TextAlign.center,
@@ -137,16 +145,8 @@ Widget _buildCurrencyContainer() {
 }
 
 Widget _buildFuelImageContainer() {
-  return Container(
-    width: 70,
-    height: 85,
-    decoration: const BoxDecoration(
-      image: DecorationImage(
-        image: NetworkImage(
-          "https://s3-alpha-sig.figma.com/img/1f12/aaca/fc521036b5ed79ae131bb6f4f4bb4d10?Expires=1707091200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=CDzBcow3ONLkC~DNvi-veJoSa~roDfsvQXnAmGv~yKPZ~CGhKTImeLKUnmyDjcEefCUaetnh8m~OuJndQIje35iP-S9rWqUZsKg0yDg6MGmJkMA8in7BjMICUYC-EFt-J8JQKTDDIfcnJYyDCk-h64AAcltPGuCVUTz~fC7zoEKdtM1DLqGoaGz3ghuqZYXeE-qqjzLfjZYeMEMzpl5dtebRiaLI-ANutU1xycyaDyfKF3lJUNfUfuTsMGfjOzrtdBDvoj0-GHwCh87paDhs-RU5zrWeCRMcUwJYCBFg6k31SOPHQrWvcIdZACZCMw8DCcjTmSP5BY4OF4yByx46tg__",
-        ),
-        fit: BoxFit.cover,
-      ),
-    ),
+  return Image.asset(
+    'assets/Bahrat.png',
+    width: 50,
   );
 }

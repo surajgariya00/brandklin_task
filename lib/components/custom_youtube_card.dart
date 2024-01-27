@@ -11,7 +11,7 @@ class CustomYoutubeCard extends StatelessWidget {
     required this.imagePath,
     required this.title,
     required this.description,
-    this.linearGradient, // Provide a default value if needed
+    this.linearGradient,
   });
 
   @override
@@ -73,7 +73,7 @@ class CustomYoutubeCard extends StatelessWidget {
           ),
           // Other widgets like title and description can be added here
           Positioned(
-            bottom: 8,
+            bottom: 2,
             left: 2,
             right: 8,
             child: Column(
@@ -94,7 +94,6 @@ class CustomYoutubeCard extends StatelessWidget {
                   style: const TextStyle(
                     color: Color(0xFF888888),
                     fontSize: 11,
-                    fontFamily: 'Montserrat',
                     fontWeight: FontWeight.w400,
                   ),
                 ),

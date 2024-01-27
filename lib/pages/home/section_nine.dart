@@ -8,7 +8,7 @@ Widget sectionNine() {
 
   return Container(
     width: 420,
-    height: 300,
+    height: 250,
     decoration: const BoxDecoration(
       image: DecorationImage(
         image: NetworkImage(
@@ -19,13 +19,11 @@ Widget sectionNine() {
     ),
     child: Column(
       children: [
-        Container(
-          width: 132,
-          height: 21,
+        const Padding(
+          padding: EdgeInsets.only(left: 20.0),
           child: Row(
-            mainAxisSize: MainAxisSize.min,
-            mainAxisAlignment: MainAxisAlignment.end,
-            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text.rich(
                 TextSpan(
@@ -34,7 +32,7 @@ Widget sectionNine() {
                       text: 'NEWS ',
                       style: TextStyle(
                         color: Color(0xFF828282),
-                        fontSize: 20,
+                        fontSize: 24,
                         fontFamily: 'Armstrong',
                         fontWeight: FontWeight.w800,
                         height: 0,
@@ -45,11 +43,11 @@ Widget sectionNine() {
                       text: 'UPDATE',
                       style: TextStyle(
                         color: Color(0xFFAB373A),
-                        fontSize: 20,
+                        fontSize: 24,
                         fontFamily: 'Armstrong',
                         fontWeight: FontWeight.w800,
                         height: 0,
-                        letterSpacing: -0.40,
+                        letterSpacing: 2,
                       ),
                     ),
                   ],
@@ -58,7 +56,7 @@ Widget sectionNine() {
             ],
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
         SingleChildScrollView(
@@ -68,13 +66,13 @@ Widget sectionNine() {
               return Row(
                 children: [
                   Container(
-                    width: 470,
+                    width: 380,
                     height: 200,
-                    margin: EdgeInsets.only(right: 10.0),
+                    margin: const EdgeInsets.only(right: 10.0),
                     decoration: BoxDecoration(
                       image: DecorationImage(
                         image: NetworkImage(imageUrls[index]),
-                        fit: BoxFit.cover,
+                        fit: BoxFit.fill,
                       ),
                     ),
                   ),

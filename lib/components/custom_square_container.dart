@@ -1,17 +1,29 @@
 import 'package:flutter/material.dart';
 
-class CustomSquareContainer extends StatelessWidget {
+class CustomSquareContainer extends StatefulWidget {
   final String amount;
 
   const CustomSquareContainer(this.amount, {super.key});
 
   @override
+  CustomSquareContainerState createState() => CustomSquareContainerState();
+}
+
+class CustomSquareContainerState extends State<CustomSquareContainer> {
+  bool isTapped = false;
+
+  @override
   Widget build(BuildContext context) {
     return GestureDetector(
+      onTap: () {
+        setState(() {
+          isTapped = !isTapped;
+        });
+      },
       child: Container(
-        width: 85,
-        height: 85,
-        color: Color(0xFF828282),
+        width: isTapped ? 85 : 75,
+        height: isTapped ? 85 : 75,
+        color: isTapped ? Color(0xFFAB373A) : Color(0xFF828282),
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -28,7 +40,7 @@ class CustomSquareContainer extends StatelessWidget {
                 ),
               ),
               Text(
-                amount,
+                widget.amount,
                 style: const TextStyle(
                   color: Colors.white,
                   fontSize: 25,

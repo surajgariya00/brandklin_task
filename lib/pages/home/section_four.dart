@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 Widget sectionFour() {
   return Container(
-    height: 240,
+    height: 232,
     decoration: const BoxDecoration(
       image: DecorationImage(
           image: NetworkImage(
@@ -12,7 +12,7 @@ Widget sectionFour() {
           alignment: Alignment.bottomCenter),
     ),
     child: Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10),
+      padding: const EdgeInsets.only(left: 10.0, right: 10, top: 20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -25,7 +25,7 @@ Widget sectionFour() {
                     text: 'BROWSE BY ',
                     style: TextStyle(
                       color: Color(0xFF828282),
-                      fontSize: 20,
+                      fontSize: 23,
                       fontFamily: 'Armstrong',
                       fontWeight: FontWeight.w800,
                       letterSpacing: -0.40,
@@ -35,7 +35,7 @@ Widget sectionFour() {
                     text: 'BRANDS',
                     style: TextStyle(
                       color: Color(0xFFAB373A),
-                      fontSize: 20,
+                      fontSize: 23,
                       fontFamily: 'Armstrong',
                       fontWeight: FontWeight.w800,
                       letterSpacing: -0.40,
@@ -58,7 +58,7 @@ Widget sectionFour() {
               ],
             ),
           ),
-          SizedBox(height: 15),
+          const SizedBox(height: 15),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
@@ -85,10 +85,10 @@ Column _buildBrandColumn(
         width: imageWidth,
         fit: BoxFit.fill,
       ),
-      SizedBox(height: 15),
+      const SizedBox(height: 15),
       Text(
         brandName,
-        style: TextStyle(
+        style: const TextStyle(
           fontSize: 12,
           fontWeight: FontWeight.w500,
         ),

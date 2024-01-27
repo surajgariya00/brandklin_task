@@ -3,28 +3,28 @@ import 'package:flutter/material.dart';
 class CustomCard extends StatelessWidget {
   final String text;
 
-  CustomCard(this.text);
+  const CustomCard(this.text, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Card(
-      elevation: 2, // Add elevation for a shadow effect
+      elevation: 2,
+      color: Colors.white,
       shape: RoundedRectangleBorder(
-        borderRadius:
-            BorderRadius.circular(2), // Adjust the border radius as needed
+        borderRadius: BorderRadius.circular(2),
       ),
       child: SizedBox(
         width: 126,
-        height: 35,
+        height: 30,
         child: Center(
           child: Text(
             text,
             textAlign: TextAlign.center,
-            style: TextStyle(
+            style: const TextStyle(
               color: Color(0xFF828282),
-              fontSize: 9,
+              fontSize: 10,
               fontFamily: 'Montserrat',
-              fontWeight: FontWeight.w700,
+              fontWeight: FontWeight.bold,
               height: 0,
               letterSpacing: 1.61,
             ),

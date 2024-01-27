@@ -4,24 +4,24 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 Widget sectionFive() {
-  return Container(
+  return SizedBox(
     height: 280,
     child: Row(
       children: [
         Container(
           height: 260,
-          width: 80, // Set the width for the first container
+          width: 80,
           decoration: const BoxDecoration(color: Color(0xFFF9F9F9)),
           child: Row(
             children: [
               Container(
                 width: 10,
-                decoration: BoxDecoration(color: Colors.black),
+                decoration: const BoxDecoration(color: Colors.black),
               ),
               Container(
                 height: 260,
                 width: 70,
-                decoration: BoxDecoration(color: Color(0xFFAB373A)),
+                decoration: const BoxDecoration(color: Color(0xFFAB373A)),
                 child: Transform.rotate(
                   angle: -90 * 3.14 / 180,
                   child: const Center(
@@ -53,7 +53,7 @@ Widget sectionFive() {
                       end: Alignment.bottomCenter,
                       colors: [
                         Colors.black.withOpacity(0.3),
-                        Color(0x33FF9820).withOpacity(0.5),
+                        const Color(0x33FF9820).withOpacity(0.5),
                       ],
                     ),
                     imagePath: cardData.imagePath,

@@ -5,8 +5,9 @@ import 'package:flutter/material.dart';
 
 Widget sectionOne(List<DummyCarData> dummyDataList) {
   return Container(
+    padding: EdgeInsets.only(bottom: 1),
     width: 420,
-    height: 400,
+    height: 410,
     decoration: const BoxDecoration(
       image: DecorationImage(
         image: NetworkImage(
@@ -18,27 +19,38 @@ Widget sectionOne(List<DummyCarData> dummyDataList) {
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Row(
-          crossAxisAlignment: CrossAxisAlignment.center,
+        Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            CustomSquareContainer('10'),
-            SizedBox(width: 10),
-            CustomSquareContainer('20'),
-            SizedBox(width: 10),
-            CustomSquareContainer('30'),
-            SizedBox(width: 10),
-            CustomSquareContainer('40'),
+            const CustomSquareContainer('10'),
+            Container(
+              width: 2,
+              height: 50,
+              color: Colors.grey,
+            ),
+            const CustomSquareContainer('20'),
+            Container(
+              width: 2,
+              height: 50,
+              color: Colors.grey,
+            ),
+            const CustomSquareContainer('30'),
+            Container(
+              width: 2,
+              height: 50,
+              color: Colors.grey,
+            ),
+            const CustomSquareContainer('40'),
           ],
         ),
-        const SizedBox(height: 10),
+        const SizedBox(height: 30),
         Expanded(
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
             itemCount: dummyDataList.length,
             itemBuilder: (context, index) {
               return Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.symmetric(horizontal: 8.0),
                 child: CustomPictureCard(data: dummyDataList[index]),
               );
             },

@@ -1,4 +1,4 @@
-import 'package:brandklin_task/pages/home/home_page.dart';
+import 'package:brandklin_task/pages/login_page.dart';
 import 'package:brandklin_task/theme/light_mode.dart';
 import 'package:flutter/material.dart';
 
@@ -15,6 +15,6 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
         theme: lightMode,
-        home: HomePage());
+        home: LoginPage());
   }
 }
