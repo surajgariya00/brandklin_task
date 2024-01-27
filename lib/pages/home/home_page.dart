@@ -1,9 +1,14 @@
 import 'dart:ui' as ui;
 import 'package:brandklin_task/components/custom_card.dart';
 import 'package:brandklin_task/components/custom_shape.dart';
+import 'package:brandklin_task/components/custom_youtube_card.dart';
 import 'package:brandklin_task/model/dummy_data.dart';
+import 'package:brandklin_task/model/dummy_youtube_data.dart';
+import 'package:brandklin_task/pages/home/footer.dart';
+import 'package:brandklin_task/pages/home/section_eight.dart';
 import 'package:brandklin_task/pages/home/section_five.dart';
 import 'package:brandklin_task/pages/home/section_four.dart';
+import 'package:brandklin_task/pages/home/section_nine.dart';
 import 'package:brandklin_task/pages/home/section_one.dart';
 import 'package:brandklin_task/pages/home/section_seven.dart';
 import 'package:brandklin_task/pages/home/section_six.dart';
@@ -193,7 +198,47 @@ class HomePage extends StatelessWidget {
             const SizedBox(
               height: 10,
             ),
-            sectionSeven()
+            sectionSeven(context),
+            SizedBox(
+              height: 10,
+            ),
+            const Text.rich(
+              TextSpan(
+                children: [
+                  TextSpan(
+                    text: 'TOP PICKS FOR ',
+                    style: TextStyle(
+                      color: Color(0xFF828282),
+                      fontSize: 20,
+                      fontFamily: 'Armstrong',
+                      fontWeight: FontWeight.w800,
+                      height: 0,
+                      letterSpacing: -0.40,
+                    ),
+                  ),
+                  TextSpan(
+                    text: 'YOU',
+                    style: TextStyle(
+                      color: Color(0xFFAB3839),
+                      fontSize: 20,
+                      fontFamily: 'Armstrong',
+                      fontWeight: FontWeight.w800,
+                      height: 0,
+                      letterSpacing: -0.40,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            sectionEight(),
+            SizedBox(
+              height: 10,
+            ),
+            sectionNine(),
+            SizedBox(
+              height: 10,
+            ),
+            footer(),
           ],
         ),
       ),

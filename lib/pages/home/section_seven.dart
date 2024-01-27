@@ -1,11 +1,9 @@
-import 'dart:js';
-
 import 'package:flutter/material.dart';
 
-Widget sectionSeven() {
+Widget sectionSeven(BuildContext context) {
   return Container(
     height: 160,
-    width: MediaQuery.of(context as BuildContext).size.width * 1,
+    width: MediaQuery.of(context).size.width * 1,
     decoration: BoxDecoration(
       image: const DecorationImage(
         image: NetworkImage(

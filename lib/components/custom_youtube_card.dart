@@ -4,12 +4,14 @@ class CustomYoutubeCard extends StatelessWidget {
   final String imagePath;
   final String title;
   final String description;
+  final LinearGradient? linearGradient; // Make LinearGradient optional
 
   const CustomYoutubeCard({
     super.key,
     required this.imagePath,
     required this.title,
     required this.description,
+    this.linearGradient, // Provide a default value if needed
   });
 
   @override
@@ -22,37 +24,39 @@ class CustomYoutubeCard extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(3),
-        // boxShadow: const [
-        //   BoxShadow(
-        //     color: Colors.white,
-        //     spreadRadius: 2,
-        //     blurRadius: 5,
-        //     offset: Offset(0, 3),
-        //   ),
-        // ],
+        boxShadow: const [
+          BoxShadow(
+            color: Colors.grey,
+            spreadRadius: 1,
+            blurRadius: 3,
+            offset: Offset(0, 2),
+          ),
+        ],
       ),
       child: Stack(
         children: [
-          // Apply LinearGradient to the background image
-          ShaderMask(
-            shaderCallback: (Rect bounds) {
-              return const LinearGradient(
-                begin: Alignment.topLeft,
-                end: Alignment.bottomCenter,
-                colors: [
-                  Colors.black,
-                  Color(0x33FF9820),
-                ],
-              ).createShader(bounds);
-            },
-            blendMode: BlendMode.srcATop,
-            child: Image.asset(
+          // Check if linearGradient is provided, apply it using ShaderMask
+          if (linearGradient != null)
+            ShaderMask(
+              shaderCallback: (Rect bounds) {
+                return linearGradient!.createShader(bounds);
+              },
+              blendMode: BlendMode.srcATop,
+              child: Image.asset(
+                imagePath,
+                width: 240,
+                height: 200,
+                fit: BoxFit.cover,
+              ),
+            )
+          else
+            // If linearGradient is not provided, use the original Image.asset
+            Image.asset(
               imagePath,
               width: 240,
               height: 200,
               fit: BoxFit.cover,
             ),
-          ),
 
           Positioned.fill(
             child: Align(
