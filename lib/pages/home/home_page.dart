@@ -1,16 +1,22 @@
-import 'dart:ffi';
-
+import 'dart:ui' as ui;
 import 'package:brandklin_task/components/custom_card.dart';
+import 'package:brandklin_task/components/custom_shape.dart';
 import 'package:brandklin_task/model/dummy_data.dart';
+import 'package:brandklin_task/pages/home/section_five.dart';
 import 'package:brandklin_task/pages/home/section_four.dart';
 import 'package:brandklin_task/pages/home/section_one.dart';
+import 'package:brandklin_task/pages/home/section_seven.dart';
+import 'package:brandklin_task/pages/home/section_six.dart';
 import 'package:brandklin_task/pages/home/section_three.dart';
 import 'package:brandklin_task/pages/home/section_two.dart';
+import 'package:carousel_slider/carousel_slider.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class HomePage extends StatelessWidget {
   HomePage({super.key});
-  List<DummyCarData> dummyDataList = dummyCarDataList;
+  final List<DummyCarData> dummyDataList = dummyCarDataList;
 
   @override
   Widget build(BuildContext context) {
@@ -122,11 +128,11 @@ class HomePage extends StatelessWidget {
             sectionOne(dummyDataList),
             sectionTwo(),
             sectionThree(dummyDataList),
-            SizedBox(
+            const SizedBox(
               height: 40,
             ),
             Container(
-              height: 80,
+              height: 60,
               width: double.infinity,
               decoration: const BoxDecoration(
                 image: DecorationImage(
@@ -137,7 +143,57 @@ class HomePage extends StatelessWidget {
                 ),
               ),
             ),
-            sectionFour()
+            sectionFour(),
+            const SizedBox(
+              height: 5,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Column(
+                  children: [
+                    SizedBox(
+                      width: 200,
+                      height: 40,
+                      child: CustomPaint(
+                        painter: CustomShape(),
+                        child: Center(
+                          child: Transform.translate(
+                            offset: const Offset(16, -1),
+                            child: const Text(
+                              'LOAD MORE',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 18,
+                                fontFamily: 'Montserrat',
+                                fontWeight: FontWeight.w700,
+                                height: 0,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+            Container(
+              height: 1, // Adjust the height of the line
+              color: const ui.Color.fromARGB(255, 98, 98, 98),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            sectionFive(),
+            const SizedBox(
+              height: 10,
+            ),
+            sectionSix(),
+            const SizedBox(
+              height: 10,
+            ),
+            sectionSeven()
           ],
         ),
       ),
