@@ -23,7 +23,7 @@ class CustomSquareContainerState extends State<CustomSquareContainer> {
       child: Container(
         width: isTapped ? 85 : 75,
         height: isTapped ? 85 : 75,
-        color: isTapped ? Color(0xFFAB373A) : Color(0xFF828282),
+        color: isTapped ? const Color(0xFFAB373A) : const Color(0xFF828282),
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,

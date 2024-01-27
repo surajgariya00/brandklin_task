@@ -1,4 +1,3 @@
-import 'package:brandklin_task/components/custom_shape.dart';
 import 'package:brandklin_task/components/rombus_shape.dart';
 import 'package:flutter/material.dart';
 import 'package:brandklin_task/components/custom_data_show.dart';

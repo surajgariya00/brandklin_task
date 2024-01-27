@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 
 Widget sectionOne(List<DummyCarData> dummyDataList) {
   return Container(
-    padding: EdgeInsets.only(bottom: 1),
+    padding: const EdgeInsets.only(bottom: 1),
     width: 420,
     height: 410,
     decoration: const BoxDecoration(

@@ -4,7 +4,7 @@ class CustomShape extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final paint = Paint();
-    paint.color = Color(0xFF828282);
+    paint.color = const Color(0xFF828282);
     paint.style = PaintingStyle.fill;
     paint.strokeWidth = 1;
 

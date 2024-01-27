@@ -45,7 +45,7 @@ Widget sectionFour() {
               ),
             ),
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           Padding(
             padding: const EdgeInsets.only(left: 5.0),
             child: Row(
@@ -71,7 +71,6 @@ Widget sectionFour() {
         ],
       ),
     ),
-    // Your other content goes here
   );
 }
 

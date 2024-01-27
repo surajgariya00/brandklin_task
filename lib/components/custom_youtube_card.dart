@@ -4,8 +4,7 @@ class CustomYoutubeCard extends StatelessWidget {
   final String imagePath;
   final String title;
   final String description;
-  final LinearGradient? linearGradient; // Make LinearGradient optional
-
+  final LinearGradient? linearGradient;
   const CustomYoutubeCard({
     super.key,
     required this.imagePath,
@@ -17,7 +16,7 @@ class CustomYoutubeCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(left: 5, top: 5),
+      padding: const EdgeInsets.only(left: 5, top: 5),
       height: 260,
       width: 250,
       margin: const EdgeInsets.all(8),
@@ -35,7 +34,6 @@ class CustomYoutubeCard extends StatelessWidget {
       ),
       child: Stack(
         children: [
-          // Check if linearGradient is provided, apply it using ShaderMask
           if (linearGradient != null)
             ShaderMask(
               shaderCallback: (Rect bounds) {
@@ -50,14 +48,12 @@ class CustomYoutubeCard extends StatelessWidget {
               ),
             )
           else
-            // If linearGradient is not provided, use the original Image.asset
             Image.asset(
               imagePath,
               width: 240,
               height: 200,
               fit: BoxFit.cover,
             ),
-
           Positioned.fill(
             child: Align(
               alignment: Alignment.center,
@@ -71,7 +67,6 @@ class CustomYoutubeCard extends StatelessWidget {
               ),
             ),
           ),
-          // Other widgets like title and description can be added here
           Positioned(
             bottom: 2,
             left: 2,
